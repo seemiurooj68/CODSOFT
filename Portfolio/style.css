@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 0.3s;
+}
+
+body {
+    color: aliceblue;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(10, 10, 10, 0.9); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    height: 80px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo i {
+    margin-right: 10px;
+    font-size: 32px;
+}
+
+.logo span {
+    color: #89c086;  
+}
+
+.navbar ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.navbar ul li a:hover {
+    color: #89c086; 
+}
+
+.navbar ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #89c086; 
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: width 0.3s;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.home {
+    padding-top: 120px;
+    height: calc(100vh - 120px);
+    background: url(images/background_image.jpg) no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px; 
+    height: calc(100vh - 90px);  
+}
+
+.home-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 40px;
+    border-radius: 14px;
+    max-width: 70%;  
+    margin-top: 10rem;
+}
+
+.home-content h3,
+.home-content h1,
+.home-content p {
+    text-transform: capitalize;
+    margin-bottom: 2px;
+}
+
+.home-content h1 {
+    color: #5ab655;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.home-content h3 {
+    color: #3260a0;
+    font-size: 1.7rem;
+}
+
+.home-content p {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    color: #c9dde2;
+    font-size: 1.3rem;
+}
+
+/* Button Styling */
+button {
+    margin-top: 20px;  
+    font-size: 1rem;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background: #41793f; /
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: #3260a0;
+}
+
+/*about me*/
+
+.about_me {
+    padding: 50px 0; 
+    background-color: #121212;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.description {
+    flex: 1; 
+    padding: 0 20px; 
+}
+
+.about_me_img {
+    max-width: 100%; 
+    border-radius: 10px; 
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); 
+}
+
+/* Styling for headings */
+.description h1 {
+    font-size: 2.5rem;
+    color: #89c086;
+}
+
+.description h1 span {
+    color: #4a87dd;
+}
+
+.description h3 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    color: #bbb;
+}
+
+.description p {
+    margin-top: 20px;
+    color: #adced6;
+    line-height: 1.6; 
+}
+
+.about_me div {
+    margin-top: 30px; 
+}
+
+.about_me div a {
+    margin-right: 10px; 
+    transition: transform 0.2s; 
+}
+
+.about_me div a:hover {
+    transform: translateY(-5px);
+}
+
+/*Skills*/
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px; 
+}
+
+.skills-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color:  #4a87dd;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    width: 100%; 
+}
+
+.skills-heading:hover{
+    color: #cddbef;
+}
+
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.skill {
+    flex-basis: calc(33.33% - 20px);
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+}
+
+.skill img {
+    width: 150px;  
+    height: 150px; 
+    object-fit: contain; 
+    border-radius: 50%;  
+    margin-bottom: 20px;
+    background-color: #f2f2f2; 
+}
+
+.skill h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #89c086;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #bbbbbbc5;
+    text-align: center;
+    margin-top: auto; 
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.contact-section {
+    background-color: #1a1a1a;
+    padding: 50px 10%;
+    text-align: center;
+    color: #eee;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-info i {
+    font-size: 1.5rem;
+    color: #89c086; /* A green shade for the email icon */
+    margin-right: 10px;
+}
+
+.contact-info span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.box {
+    margin-bottom: 20px;
+}
+
+.box label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.box input[type="text"], 
+.box input[type="email"], 
+.box textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #333;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.box textarea {
+    resize: vertical;
+}
+
+
+
